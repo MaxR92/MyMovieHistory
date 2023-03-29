@@ -7,8 +7,8 @@ const SearchBox = (props) => {
 		props.setSearchValue("");
 	}
 
-	const debouncedHandler = (props) => {
-		setTimeout(props, 300)
+	const handleSearchChange = (value) => {
+		props.setSearchValue(value)
 	}
 
 	return (
@@ -16,7 +16,7 @@ const SearchBox = (props) => {
 			<input
 				className='form-control'
 				value={props.searchValue}
-				onChange={(event) => props.setSearchValue(event.target.value)}
+				onChange={(event) => handleSearchChange(event.target.value)}
 				placeholder='Type to search...'
 			></input>
 			<button onClick={clearSearch}>clear search</button>
