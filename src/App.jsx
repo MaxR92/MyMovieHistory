@@ -8,6 +8,7 @@ import RemoveFavourites from "./components/RemoveFavourites";
 import { useHorizontalScroll } from "./components/SideScroll";
 import { useHorizontalScroll2 } from "./components/SideScroll2";
 import Modal from "./components/Modal";
+import PlaceholderList from "./components/PlaceholderList";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -68,21 +69,23 @@ const App = () => {
   return (
     <div className="movie-app">
       <div className="Movie-Search">
-        <MovieListHeading heading="Movies" />
+        <MovieListHeading heading="My Movie History" />
         <div className="ModalCasing">
           <button className="OpenButton" onClick={() => setIsOpen(true)}>
             Need Help?
           </button>
           {isOpen && <Modal setIsOpen={setIsOpen} />}
         </div>
-        <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+        <SearchBox setMovies={setMovies} searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       <div ref={scrollRef} className="Movie-Preview">
-        <MovieList
+        {movies.length == 0  
+        ? [...new Array(6)].map((_item, index) => <PlaceholderList key={index} />)
+        : <MovieList
           movies={movies}
           handleFavouritesClick={addFavouriteMovie}
           favouriteComponent={AddFavourites}
-        />
+          /> }
       </div>
       <div className="Personal-Favorites">
         <MovieListHeading heading="Your Favorites" />
