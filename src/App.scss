@@ -277,6 +277,7 @@
             .modal {
               width: 80vw;
               height: 80vh;
+              overflow: scroll;
             }
           }
         }
@@ -287,6 +288,7 @@
           .form-control {
             height: 1.3rem;
             width: 7rem;
+            margin-bottom: 0.2rem;
           }
           button {
             margin-left: 0rem;
