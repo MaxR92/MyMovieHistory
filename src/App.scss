@@ -275,8 +275,8 @@
           }
           .centered {
             .modal {
-              width: 400px;
-              height: 500px;
+              width: 80vw;
+              height: 80vh;
             }
           }
         }
@@ -296,7 +296,47 @@
           }
         }
       }
-      
+      .Movie-Preview {
+        .image-container {
+          padding: 0.5rem 1rem;
+          .movie-title {
+            max-width: 21ch;
+          }
+          a {
+            .movie-image {
+              height: 250px;
+              width: 180px;
+            }
+          }
+          .movie-image {
+            height: 250px;
+            width: 180px;
+          }
+          .favorite-overlay {
+            border: 1px solid red;
+            padding: 0.2rem;
+          }
+        }
+      }
+      .Movie-Favorites {
+        .image-container {
+          padding: 0.5rem 1rem;
+          .movie-title {
+            max-width: 21ch;
+          }
+          a {
+            .movie-image {
+              height: 250px;
+              width: 180px;
+            }
+          }
+          .favorite-overlay {
+            border: 1px solid red;
+            padding: 0.2rem;
+            width: 11.4em;
+          }
+        }
+      }
     }
   }
 }
