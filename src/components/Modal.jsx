@@ -7,11 +7,11 @@ const Modal = (props) => {
   const [favourites, setFavourites] = useContext(Context);
 
   const ImportFunction = () => {
-    // const userData = navigator.clipboard.readText();
-    // const DataResult = userData.then((text) => {
-    //   localStorage.setItem("react-movie-app-favourites", JSON.parse(JSON.stringify((text))));
-    // })
-    console.log("test from import");
+    const userData = navigator.clipboard.readText();
+    const DataResult = userData.then((text) => {
+      localStorage.setItem("react-movie-app-favourites", JSON.parse(JSON.stringify((text))));
+    })
+    console.log("test from import", userData);
     // window.location.reload(false);
   }
 
