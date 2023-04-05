@@ -192,17 +192,11 @@ const App = () => {
           />
         </div>
         <div ref={scrollRef} className="Movie-Preview">
-          {movies.length == 0 ? (
-            [...new Array(6)].map((_item, index) => (
-              <PlaceholderList key={index} />
-            ))
-          ) : (
-            <MovieList
-              movies={movies}
-              handleFavouritesClick={addFavouriteMovie}
-              favouriteComponent={AddFavourites}
-            />
-          )}
+          <MovieList
+            movies={movies}
+            handleFavouritesClick={addFavouriteMovie}
+            favouriteComponent={AddFavourites}
+          />
         </div>
         <div className="Personal-Favorites">
           <MovieListHeading heading="Your Favorites" />
