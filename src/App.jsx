@@ -8,7 +8,6 @@ import RemoveFavourites from "./components/RemoveFavourites";
 import { useHorizontalScroll } from "./components/SideScroll";
 import { useHorizontalScroll2 } from "./components/SideScroll2";
 import Modal from "./components/Modal";
-import PlaceholderList from "./components/PlaceholderList";
 import Top10 from "./images/Top10.png";
 import FavoriteList from "./components/FavoriteList";
 
