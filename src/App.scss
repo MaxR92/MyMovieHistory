@@ -324,6 +324,17 @@
               width: 80vw;
               height: 80vh;
               overflow: scroll;
+              .buttonArea {
+                justify-content: space-between;
+                button {
+                  font-size: 12px;
+                  width: 60px;
+                  height: 40px;
+                  padding: 0 0;
+                  margin-bottom: 1rem;
+                }
+              }
+              
             }
           }
         }
