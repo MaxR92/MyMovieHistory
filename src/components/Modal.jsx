@@ -10,8 +10,8 @@ const Modal = (props) => {
     const userData = navigator.clipboard.readText();
     const DataResult = userData.then((text) => {
       localStorage.setItem("react-movie-app-favourites", JSON.parse(JSON.stringify((text))));
+      console.log("test from import", userData);
     })
-    console.log("test from import", userData);
     // window.location.reload(false);
   }
 
