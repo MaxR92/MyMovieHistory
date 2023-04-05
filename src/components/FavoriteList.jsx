@@ -3,7 +3,7 @@ import Image from "../images/image.png";
 import { useContext } from "react";
 import { Context } from "../App";
 
-const MovieList = (props) => {
+const FavoriteList = (props) => {
 
   const [favourites, setFavourites] = useContext(Context);
 
@@ -21,7 +21,7 @@ const MovieList = (props) => {
     <>
       {props.movies && (
         <>
-          {props.movies.map((movie, index) => (
+          {favourites.map((movie, index) => (
             <div key={index} className="image-container">
               <p className="movie-title">
                 <a
@@ -57,4 +57,4 @@ const MovieList = (props) => {
   );
 };
 
-export default MovieList;
+export default FavoriteList;

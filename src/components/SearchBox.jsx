@@ -25,6 +25,3 @@ const SearchBox = (props) => {
 };
 
 export default SearchBox;
-
-
-{/*Maybe build in an random button, to get some random movies or series */}
