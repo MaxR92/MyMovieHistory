@@ -12,7 +12,7 @@ const Modal = (props) => {
     //   localStorage.setItem("react-movie-app-favourites", JSON.parse(JSON.stringify((text))));
     // })
     console.log("test from import");
-    window.location.reload(false);
+    // window.location.reload(false);
   }
 
   const LoadFavorites = () => {
